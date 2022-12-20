@@ -49,6 +49,8 @@ Herein are cheatsheets for various software as well as some THM writeups. Check 
   - [AoC4 - Day 16](writeups/THM/aoc4/Advent-of-Cyber-4-Day-16.md)
   - [AoC4 - Day 17](writeups/THM/aoc4/Advent-of-Cyber-4-Day-17.md)
   - [AoC4 - Day 18](writeups/THM/aoc4/Advent-of-Cyber-4-Day-18.md)
+  - [AoC4 - Day 19](writeups/THM/aoc4/Advent-of-Cyber-4-Day-19.md)
+  - [AoC4 - Day 20](writeups/THM/aoc4/Advent-of-Cyber-4-Day-20.md)
 
 ## Software
 
